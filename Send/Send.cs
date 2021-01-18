@@ -8,7 +8,7 @@ namespace Send
     {
         static void Main(string[] args)
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() { HostName = "mensageria", Port = 5672, UserName= "testes", Password= "RabbitMQ2019!" };
             using (var connection = factory.CreateConnection())
             {
                 using (var channel = connection.CreateModel())
